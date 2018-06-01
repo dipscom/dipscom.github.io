@@ -1,0 +1,88 @@
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: hsl(60, 42.9%, 95.9%);
+  color: hsl(360, 100%, 10%);
+  font-family: sans-serif;
+  display: grid;
+  grid-template-columns: 1rem 1fr 1rem;
+}
+
+body>* {
+  grid-column: 2;
+}
+
+header {
+  background-color: hsl(54, 36.6%, 83.9%);
+  grid-column: 1 / -1;
+  padding: 1rem;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+main> :first-child {
+  grid-column: 1 / -1;
+}
+
+h1, h2, a {
+  color: hsl(15.5, 67.7%, 44.9%);
+}
+
+h1 {
+  margin-bottom: 0;
+}
+
+nav {}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+
+.work-link {
+  display: grid;
+  overflow: hidden;
+  border: 1px solid black;
+  text-decoration: none;
+}
+
+.work-link>* {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+}
+
+.work-link>picture {
+  transition: all 0.3s;
+}
+
+.work-link:hover>picture {
+  opacity: 0.125;
+}
+
+.work-link>div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  opacity: 0;
+  transform: scale(2, 2);
+  transform-origin: bottom;
+  transition: all 0.3s;
+  padding: 0 0.5rem;
+}
+
+.work-link:hover>div {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+
+.work-link p {
+  color: black;
+}
