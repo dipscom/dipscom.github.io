@@ -29,7 +29,7 @@ footer {
 }
 
 header {
-  background-color: hsl(63, 42.2%, 91.2%);
+  background-color: hsl(63, 40%, 91%);
   grid-column: 1 / -1;
   padding: 1rem;
 }
@@ -43,7 +43,7 @@ footer>* {
 main {}
 
 h1, h2 {
-  color: hsl(15.5, 67.7%, 44.9%);
+  color: hsl(16, 100%, 29%);
   font-weight: normal;
 }
 
@@ -64,7 +64,7 @@ ul {
 }
 
 li a {
-  color: hsl(15.5, 67.7%, 44.9%);
+  color: hsl(16, 100%, 29%);
 }
 
 img {
@@ -82,5 +82,5 @@ footer {
 
 .date {
   font-size: 0.75rem;
-  color: hsl(0, 0%, 45%);
+  color: hsl(0, 0%, 33%);
 }
