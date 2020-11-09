@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="apple-touch-icon" sizes="57x57" href="./apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="./apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="./apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="./apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="./apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="./apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="./apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="./apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="./apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="./android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="./favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+	<link rel="manifest" href="./manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="./ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<title>Penhaligon's Letters of Love</title>
+
+
+	<link rel="stylesheet" href="https://use.typekit.net/rbi1sfm.css">
+
+</head>
+
+<style>
+	/* GLOBAL AND GENERIC RULES */
+	@font-face {
+		font-family: 'Lovato';
+		src: url('./fonts/lovato/regular.woff') format('woff');
+		font-weight: normal;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: 'Lovato';
+		src: url('./fonts/lovato/black.woff') format('woff');
+		font-weight: bold;
+		font-style: normal;
+	}
+
+	html,
+	body {
+		margin: 0;
+	}
+
+	img {
+		width: auto;
+		height: auto;
+	}
+
+	input:focus,
+	select:focus,
+	textarea:focus,
+	button:focus {
+	    outline: none;
+	}
+</style>
+
+<body>
+
+	<!-- This tag will be totally replaced by Vue -->
+	<div id="app">
+
+		<router-view></router-view>
+
+	</div>
+
+
+
+	<!-- Required if supporting IE, it automagically polyfills Promise -->
+	<script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+	<!-- TODO: consider CDN fallbacks -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/plugins/ScrollToPlugin.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+
+	<script type="text/javascript" src="./data/blacklisted-words.js"></script>
+	<script type="text/javascript" src="./data/data.js"></script>
+	<script type="text/javascript" src="./vendor.js"></script>
+	<script type="text/javascript" src="./app.js"></script>
+
+	<script type="text/javascript">
+
+		// wait until DOM is ready
+		document.addEventListener("DOMContentLoaded", function(event) {
+
+			window.addEventListener("load", function(){
+
+				// console.log('index - All assets ready');
+				// TODO: only trigger initial animation from here as it will have waited for the images
+
+			});
+
+		});
+
+		require('main');
+
+	</script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84546170-2"></script> -->
+	<!-- <script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-84546170-2');
+	</script> -->
+
+</body>
+
+</html>
