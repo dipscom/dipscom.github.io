@@ -17,7 +17,7 @@ body {
   min-height: 100vh;
 }
 
-body>* {
+body > * {
   grid-column: 2;
 }
 
@@ -35,11 +35,21 @@ header {
   padding: 1rem;
 }
 
-header>*,
-main>*,
-footer>* {
+header > *,
+main > *,
+footer > * {
   width: 100%;
   max-width: 600px;
+}
+
+header > :not(:last-child),
+section > :not(:last-child),
+article > :not(:last-child) {
+  margin-bottom: 0.75rem;
+}
+
+main > :not(:last-child) {
+  margin-bottom: 2rem;
 }
 
 main {
@@ -49,15 +59,19 @@ main {
 h1, h2 {
   color: hsl(16, 100%, 29%);
   font-weight: normal;
+  line-height: 1;
 }
 
-h1 {}
+h1 {
+  font-family: cursive;
+  font-weight: 900;
+  font-style: italic;
+  text-shadow: 1px 1px 0px #000;
+}
 
 a {
   color: hsl(0, 0%, 20%);
 }
-
-p {}
 
 ul {
   padding: 0;
@@ -93,6 +107,12 @@ footer {
   color: hsl(0, 0%, 33%);
 }
 
+.footnotes {
+  font-size: 0.5rem;
+  font-style: italic;
+  padding-left: 0.5rem;
+}
+
 @media screen and (max-width: 812px) and (orientation: landscape) {
   body {
     grid-template-columns: 1fr 5fr;
@@ -102,10 +122,6 @@ footer {
   header {
     grid-row: 1 / -1;
     grid-column: 1 / auto;
-  }
-
-  h1 {
-    margin: 0.75rem 0 0.75rem 0;
   }
 
   ul {
