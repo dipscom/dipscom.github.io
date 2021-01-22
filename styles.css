@@ -57,7 +57,7 @@ main {
 }
 
 h1, h2 {
-  color: hsl(16, 100%, 29%);
+  color: hsl(15.5, 67.7%, 44.9%);
   font-weight: normal;
   line-height: 1;
 }
@@ -86,7 +86,7 @@ li:not(:last-of-type) {
 }
 
 li a {
-  color: hsl(16, 100%, 29%);
+  color: hsl(15.5, 67.7%, 44.9%);
 }
 
 img {
@@ -124,6 +124,10 @@ footer {
     grid-column: 1 / auto;
   }
 
+  h1 {
+    font-size: 1.5rem;
+  }
+
   ul {
     flex-direction: column;
     position: -webkit-sticky;
@@ -138,5 +142,11 @@ footer {
   footer {
     grid-column-start: auto;
     background-color: transparent;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  h1 {
+    font-size: 3rem;
   }
 }
