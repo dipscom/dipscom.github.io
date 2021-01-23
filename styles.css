@@ -11,139 +11,37 @@ body {
   background-color: hsl(60, 43%, 96%);
   color: hsl(0, 0%, 20%);
   font-family: sans-serif;
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  grid-template-rows: auto 1fr auto;
   min-height: 100vh;
+  padding: 1rem;
 }
 
 body > * {
-  grid-column: 2;
-}
-
-header,
-main,
-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-header {
-  background-color: hsl(63, 40%, 91%);
-  grid-column: 1 / -1;
-  padding: 1rem;
-}
-
-header > *,
-main > *,
-footer > * {
-  width: 100%;
-  max-width: 600px;
-}
-
-header > :not(:last-child),
-section > :not(:last-child),
-article > :not(:last-child) {
-  margin-bottom: 0.75rem;
-}
-
-main > :not(:last-child) {
   margin-bottom: 2rem;
 }
 
-main {
-  padding: 1rem;
+section > :not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+h1, section {
+  width: 100%;
 }
 
 h1, h2 {
   color: hsl(15.5, 67.7%, 44.9%);
+  text-shadow: 1px 1px 0px #000;
   font-weight: normal;
   line-height: 1;
 }
 
-h1 {
-  font-family: cursive;
-  font-weight: 900;
-  font-style: italic;
-  text-shadow: 1px 1px 0px #000;
+h1, h2, p {
+  max-width: 65ch;
 }
 
 a {
   color: hsl(0, 0%, 20%);
 }
 
-ul {
-  padding: 0;
-  list-style: none;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-li:not(:last-of-type) {
-  margin-right: 0.5rem
-}
-
-li a {
-  color: hsl(15.5, 67.7%, 44.9%);
-}
-
-img {
-  max-width: 100%;
-  max-height: 100%;
-  display: block;
-}
-
-footer {
-  grid-column: 1 / -1;
-  text-align: center;
-  padding: 1rem;
-  background-color: hsl(63, 42.2%, 91.2%);
-}
-
-.date {
-  font-size: 0.75rem;
-  color: hsl(0, 0%, 33%);
-}
-
-.footnotes {
-  font-size: 0.5rem;
-  font-style: italic;
-  padding-left: 0.5rem;
-}
-
-@media screen and (max-width: 812px) and (orientation: landscape) {
-  body {
-    grid-template-columns: 1fr 5fr;
-    grid-template-rows: 1fr auto;
-  }
-
-  header {
-    grid-row: 1 / -1;
-    grid-column: 1 / auto;
-  }
-
-  h1 {
-    font-size: 1.5rem;
-  }
-
-  ul {
-    flex-direction: column;
-    position: -webkit-sticky;
-    position: sticky;
-  }
-
-  li {
-    line-height: 1.5rem;
-    margin: 0;
-  }
-
-  footer {
-    grid-column-start: auto;
-    background-color: transparent;
-  }
-}
 
 @media screen and (min-width: 600px) {
   h1 {
