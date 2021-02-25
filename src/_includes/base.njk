@@ -6,11 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Work and experiments by Pedro Tavares">
   <title>Pedro Tavares - Frontend developer</title>
-  <link rel="stylesheet" type="text/css" href="reset.css">
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  
+  {% block head %} {% endblock %}
+  
 </head>
 
 <body>
+
+  {% block beforeH1 %} {% endblock %}
 
   <h1>Welcome</h1>
 
@@ -38,17 +41,23 @@
 
     <section>
 
-      <fieldset>
-      
-        <legend>The many faces of this website</legend>
+      <h3>
+        The many faces of this website
+      </h3>
 
-        <label for="barebones">
+      <ul>
+        <li>
+          <a href="../barebones">
+            Barebones
+          </a>
+        </li>
 
-          <input type="radio" id="barebones" name="skin" checked> Barebones
-
-        </label>
-
-      </fieldset>
+        <li>
+          <a href="../strawberry-cream">
+            Strawberry and cream
+          </a>
+        </li>
+      </ul>
 
     </section>
 
