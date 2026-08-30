@@ -5,11 +5,53 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Work and experiments by Pedro Tavares">
-    <title>Pedro Tavares - Frontend developer</title>
+    <title>Pedro Tavares - Freelance Frontend developer</title>
     <style>
+      html {
+        font-family: system-ui, sans-serif;
+        font-size: 16px;
+        font-size: clamp(16px, 1rem + 0.5vw, 22px);
+        line-height: 1.5;
+      }
+
+      body {
+        margin: 1rem;
+      }
+
       body > div {
         margin: 0 auto;
         max-width: 75ch;
+      }
+
+      h1 {
+        font-size: 3rem;
+      }
+
+      ul, ol {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .external-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem 0.5rem;
+        justify-content: center;
+      }
+
+      .external-links > li {
+        display: contents;
+      }
+
+      .external-links > ::before,
+      .external-links > :last-child::after {
+        content: "•";
+      }
+
+      .projects {
+        margin: 0 2rem;
+        margin-inline: 2rem;
       }
     </style>
   </head>
@@ -19,14 +61,21 @@
     <div>
 
       <header>
+
         <h1>
           Pedro Tavares
         </h1>
+
       </header>
 
       <main>
+
         <p>
-          I started my career as a CGI generalist, working on short films, commercials and web-based animations. Then I landed a job working with Flash creating web-banners for the entertainment industry. Once the Flash era ended, I moved to HTML5 and CSS3, and I have been working with these technologies ever since. 
+          I am a freelancer with over 20 years of experience in the digital industry, 11 of those as a frontend developer. I have a strong background in HTML, CSS and JavaScript. I am passionate about creating beautiful and functional user interfaces, that are accessible and performant.
+        </p>
+
+        <p>
+          My career started as a CGI generalist, working on short films, commercials and web-based animations. Then I landed a job working with Flash creating web-banners for the entertainment industry. Once the Flash era ended, I moved to HTML5 and CSS3, and I have been working with these technologies ever since. 
         </p>
 
         <p>
@@ -37,11 +86,17 @@
           Projects as a frontend developer.
         </h2>
 
-        <ol>
+        <ol class="projects">
+
           <li>
+
             <h3>
-              <a href="https://www.abovesurveying.com/" target="_blank">Above Surveying</a>
+              <a href="https://www.abovesurveying.com/" target="_blank" rel="noreferrer">Above Surveying</a>
             </h3>
+
+            <p>
+              <time datetime="2022-03">March 2022</time> &ndash; <time datetime="2026-07">July 2026</time>
+            </p>
 
             <p>
               In charge of the company's main client application frontend code, reviewing and giving feedback on UI and UX decisions.
@@ -50,120 +105,159 @@
             <p>
               Championed the implementation of component-based architecture for the UI elements, encouraged the use of Storybook for UI component development. Implemented and mentored others in the use of Playwright and Percy for E2E testing and the importance of visual regression testing.
             </p>
+
           </li>
 
           <li>
+
             <h3>
-              <a href="https://www.thisisabsurd.co.uk/" target="_blank"> Absurd</a>
+              <a href="https://www.thisisabsurd.co.uk/" target="_blank" rel="noreferrer"> Absurd</a>
             </h3>
 
             <p>
-              Built static and dynamic Vue components for a large payment processing platform consuming REST API endpoints. Worked alongside Umbraco develpoers to implement these components into Umbraco's Razor templates. Aslo improved the HTML and CSS structure in several previously built components.
+              <time datetime="2021-12">December 2021</time> &ndash; <time datetime="2022-02">February 2022</time>
             </p>
+
+            <p>
+              Built static and dynamic Vue components for a large payment processing platform consuming REST API endpoints. Worked alongside Umbraco developers to implement these components into Umbraco's Razor templates. Also improved the HTML and CSS structure in several previously built components.
+            </p>
+
           </li>
 
           <li>
+
             <h3>
-              <a href="https://www.rpair.co.uk/" target="_blank">RPAIR</a>
+              <a href="https://www.rpair.co.uk/" target="_blank" rel="noreferrer">RPAIR</a>
             </h3>
+
+            <p>
+              <time datetime="2021-02">February 2021</time> &ndash; <time datetime="2021-12">December 2021</time>
+            </p>
 
             <p>
               Responsible for the frontend development of a web application that allows users to manage and track their watch and jewelry repair requests. Introduced the BEM methodology and implemented SASS, dramatically reducing the fileweight and complexity of the CSS codebase. Also reduced the JavaScript payload and improved the page's performance. Introduced E2E testing using Cypress and the use of Svelte for the dynamic components of the website. Consolidated repeated PHP into reusable customizable partials and removed redundant code.
             </p>
+
           </li>
 
           <li>
+
             <h3>
-              <a href="https://www.postscriptmedical.com/" target="_blank">Postscript Medical</a>
+              <a href="https://www.postscriptmedical.com/" target="_blank" rel="noreferrer">Postscript Medical</a>
             </h3>
+
+            <p>
+              <time datetime="2020-09">September 2020</time> &ndash; <time datetime="2021-02">February 2021</time>
+            </p>
 
             <p>
               Sole developer and infrastructure architect, responsible for the full technical delivery of an MVP trialled by two London NHS hospitals; the trial was well received, with some adoption of the tool among trial users.
             </p>
+
           </li>
 
           <li>
+
             <h3>
-              <a href="https://www.branhill.com/" target="_blank">Branhill Computing Limited</a>
+              <a href="https://www.branhill.com/" target="_blank" rel="noreferrer">Branhill Computing Limited</a>
             </h3>
+
+            <p>
+              <time datetime="2019-07">July 2019</time> &ndash; <time datetime="2020-08">August 2020</time>
+            </p>
 
             <p>
               Worked as part of a team on Silm4 a web-based reimplementation of a legacy Java stock management system used by large, global companies.
             </p>
+
           </li>
 
           <li>
+
             <h3>
-              <a href="https://www.theteam.co.uk/" target="_blank">The Team</a>
+              <a href="https://www.theteam.co.uk/" target="_blank" rel="noreferrer">The Team</a>
             </h3>
 
             <p>
-              Built a microsite for their client <a href="https://www.arcadis.com/" target="_blank">Arcadis</a> of a interactive 3D map two stylized cities showcasing transportation technologies being developed for the near future. Participated in the strategy development and guided the technical choices for the project. Liaised with the client to report progress and manage expectations.
+              <time datetime="2019-03">March 2019</time> &ndash; <time datetime="2019-06">June 2019</time>
             </p>
+
+            <p>
+              Built a microsite for their client <a href="https://www.arcadis.com/" target="_blank" rel="noreferrer">Arcadis</a> of a interactive 3D map two stylized cities showcasing transportation technologies being developed for the near future. Participated in the strategy development and guided the technical choices for the project. Liaised with the client to report progress and manage expectations.
+            </p>
+
           </li>
 
           <li>
+
             <h3>
-              <a href="https://www.koffeecup.net/" target="_blank">KoffeeCup</a>
+              <a href="https://www.koffeecup.net/" target="_blank" rel="noreferrer">KoffeeCup</a>
             </h3>
+
+            <p>
+              <time datetime="2018-12">December 2018</time> &ndash; <time datetime="2019-02">February 2019</time>
+            </p>
 
             <p>
               Created several interactive VueJS components and integrated them using the MapBox API for a realtime competition leaderboard ran by Redbull. Liaised with a remote team of frontend and backend developers helping integrate the different sections of a multi-language PHP-based website.
             </p>
+
           </li>
+
         </ol>
 
         <h2>External links</h2>
 
         <p>In honour of the old tradition that existed when I started building webpages, here is a list (in no particular order) of links of my friends and people whose work I admire online.</p>
 
-        <ul>
+        <ul class="external-links">
 
           <li>
-            <a href="https://crom.ink/" target="_blank">CROM</a>
+            <a href="https://crom.ink/" target="_blank" rel="noreferrer">CROM</a>
           </li>
 
           <li>
-            <a href="https://leoarcoverde.com/" target="_blank">Leo Arcoverde</a>
+            <a href="https://leoarcoverde.com/" target="_blank" rel="noreferrer">Leo Arcoverde</a>
           </li>
 
           <li>
-            <a href="https://greensock.com/" target="_blank">Jack Doyle</a>
+            <a href="https://greensock.com/" target="_blank" rel="noreferrer">Jack Doyle</a>
           </li>
 
           <li>
-            <a href="https://www.motiontricks.com/" target="_blank">Craig Roblewsky</a>
+            <a href="https://www.motiontricks.com/" target="_blank" rel="noreferrer">Craig Roblewsky</a>
           </li>
 
           <li>
-            <a href="https://www.cassie.codes/" target="_blank">Cassie Evans</a>
+            <a href="https://www.cassie.codes/" target="_blank" rel="noreferrer">Cassie Evans</a>
           </li>
 
           <li>
-            <a href="https://heydonworks.com/" target="_blank">Heydon Pickering</a>
+            <a href="https://heydonworks.com/" target="_blank" rel="noreferrer">Heydon Pickering</a>
           </li>
 
           <li>
-            <a href="https://www.sarasoueidan.com/" target="_blank">Sara Soueidan</a>
+            <a href="https://www.sarasoueidan.com/" target="_blank" rel="noreferrer">Sara Soueidan</a>
           </li>
 
           <li>
-            <a href="https://piccalil.li/" target="_blank">Andy Bell</a>
+            <a href="https://piccalil.li/" target="_blank" rel="noreferrer">Andy Bell</a>
           </li>
 
           <li>
-            <a href="https://sarah.dev/" target="_blank">Sarah Drasner</a>
+            <a href="https://sarah.dev/" target="_blank" rel="noreferrer">Sarah Drasner</a>
           </li>
 
           <li>
-            <a href="https://www.miriamsuzanne.com/" target="_blank">Miriam Suzanne</a>
+            <a href="https://www.miriamsuzanne.com/" target="_blank" rel="noreferrer">Miriam Suzanne</a>
           </li>
 
           <li>
-            <a href="https://jensimmons.com/" target="_blank">Jen Simmons</a>
+            <a href="https://jensimmons.com/" target="_blank" rel="noreferrer">Jen Simmons</a>
           </li>
 
         </ul>
+
       </main>
 
     </div>
