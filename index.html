@@ -51,36 +51,35 @@
 
       .projects {
         margin: 0 2rem;
-        margin-inline: 2rem;
+        margin-inline: 1rem;
       }
 
-      .project {
-        align-items: baseline;
-        display: grid;
-        gap: 1rem;
-        grid-template-columns: max-content 1fr max-content;
+      .project:not(:last-child) {
         margin-block-end: 2rem;
       }
 
-      .project * {
+      .project .heading {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem 1rem;
+        align-items: baseline;
+      }
+
+      .project .heading * {
         margin: 0;
       }
 
-      .project p:not(.project-link):not(.project-dates) {
-        grid-column: 1 / -1;
-        margin-inline-start: 2rem;
+      .project > p {
+        margin-inline-start: 1rem;
       }
 
-      .project .project-link {
-        font-size: 0.8rem;
-        grid-column-start: 2;
-        grid-row-start: 1;
-      }
-
+      .project .project-link,
       .project .project-dates {
         font-size: 0.8rem;
-        grid-column-start: 3;
-        grid-row-start: 1;
+      }
+
+      .project-link {
+        flex-grow: 1;
       }
     </style>
   </head>
@@ -104,7 +103,7 @@
         </p>
 
         <p>
-          My career started as a CGI generalist, working on short films, commercials and web-based animations. Then I landed a job working with Flash creating web-banners for the entertainment industry. Once the Flash era ended, I moved to HTML5 and CSS3, and I have been working with these technologies ever since. 
+          My career started as a CGI generalist, working on short films, commercials and web-based animations. Then I landed a job working with Flash creating web-banners for the entertainment industry. Once the Flash era ended, I moved to HTML, CSS and JavaScript, and I have been working with these technologies ever since. 
         </p>
 
         <p>
@@ -119,17 +118,19 @@
 
           <li class="project">
 
-            <h3>
-              Above Surveying
-            </h3>
-
-            <p class="project-link">
-              <a href="https://www.abovesurveying.com/" target="_blank" rel="noreferrer">www.abovesurveying.com</a>
-            </p>
-
-            <p class="project-dates">
-              <time datetime="2022-03">March 2022</time> &ndash; <time datetime="2026-07">July 2026</time>
-            </p>
+            <div class="heading">
+              <h3>
+                Above Surveying
+              </h3>
+  
+              <p class="project-link">
+                <a href="https://www.abovesurveying.com/" target="_blank" rel="noreferrer">www.abovesurveying.com</a>
+              </p>
+  
+              <p class="project-dates">
+                <time datetime="2022-03">March 2022</time> &ndash; <time datetime="2026-07">July 2026</time>
+              </p>
+            </div>
 
             <p>
               Led the frontend development of a web application that allows users to manage and track the status of their solar farms.
@@ -163,17 +164,22 @@
 
           <li class="project">
 
-            <h3>
-              Absurd
-            </h3>
+            <div class="heading">
 
-            <p class="project-link">
-              <a href="https://www.thisisabsurd.co.uk/" target="_blank" rel="noreferrer">www.thisisabsurd.co.uk</a>
-            </p>
+              <h3>
+                Absurd
+              </h3>
 
-            <p class="project-dates">
-              <time datetime="2021-12">December 2021</time> &ndash; <time datetime="2022-02">February 2022</time>
-            </p>
+              <p class="project-link">
+                <a href="https://www.thisisabsurd.co.uk/" target="_blank" rel="noreferrer">www.thisisabsurd.co.uk</a>
+              </p>
+  
+              <p class="project-dates">
+                <time datetime="2021-12">December 2021</time> &ndash; <time datetime="2022-02">February 2022</time>
+              </p>
+
+            </div>
+
 
             <p>
               Built static and dynamic <b></b>Vue</b> components for a large payment processing platform consuming <b>REST API</b> endpoints. Worked alongside <b>Umbraco</b> developers to implement these components into Umbraco's Razor templates. Also improved the <b>HTML</b> and <b>CSS</b> structure in several previously built components.
@@ -183,17 +189,21 @@
 
           <li class="project">
 
-            <h3>
-              RPAIR
-            </h3>
+            <div class="heading">
 
-            <p class="project-link">
-              <a href="https://www.rpair.co.uk/" target="_blank" rel="noreferrer">www.rpair.co.uk</a>
-            </p>
+              <h3>
+                RPAIR
+              </h3>
 
-            <p class="project-dates">
-              <time datetime="2021-02">February 2021</time> &ndash; <time datetime="2021-12">December 2021</time>
-            </p>
+              <p class="project-link">
+                <a href="https://www.rpair.co.uk/" target="_blank" rel="noreferrer">www.rpair.co.uk</a>
+              </p>
+  
+              <p class="project-dates">
+                <time datetime="2021-02">February 2021</time> &ndash; <time datetime="2021-12">December 2021</time>
+              </p>
+
+            </div>
 
             <p>
               Responsible for the frontend development of a web application that allows users to manage and track their watch and jewelry repair requests. Introduced the <b>BEM methodology</b> and implemented <b>SASS</b>, dramatically reducing the fileweight and complexity of the CSS codebase. Also reduced the JavaScript payload and improved the page's performance. Introduced E2E testing using <b>Cypress</b> and the use of <b>Svelte</b> for the dynamic components of the website. Consolidated repeated <b>PHP</b> into reusable customizable partials and removed redundant code.
@@ -203,17 +213,21 @@
 
           <li class="project">
 
-            <h3>
-              PostScript Medical
-            </h3>
+            <div class="heading">
 
-            <p class="project-link">
-              <a href="https://www.postscriptmedical.com/" target="_blank" rel="noreferrer">www.postscriptmedical.com</a>
-            </p>
+              <h3>
+                PostScript Medical
+              </h3>
 
-            <p class="project-dates">
-              <time datetime="2020-09">September 2020</time> &ndash; <time datetime="2021-02">February 2021</time>
-            </p>
+              <p class="project-link">
+                <a href="https://www.postscriptmedical.com/" target="_blank" rel="noreferrer">www.postscriptmedical.com</a>
+              </p>
+  
+              <p class="project-dates">
+                <time datetime="2020-09">September 2020</time> &ndash; <time datetime="2021-02">February 2021</time>
+              </p>
+
+            </div>
 
             <p>
               Sole developer and infrastructure architect, responsible for the full technical delivery of an MVP trialled by two London NHS hospitals; the trial was well received, with some adoption of the tool among trial users.
@@ -223,13 +237,17 @@
 
           <li class="project">
 
-            <h3>
-              Branhill Computing Limited
-            </h3>
+            <div class="heading">
 
-            <p class="project-dates">
-              <time datetime="2019-07">July 2019</time> &ndash; <time datetime="2020-08">August 2020</time>
-            </p>
+              <h3>
+                Branhill Computing Limited
+              </h3>
+
+              <p class="project-dates">
+                <time datetime="2019-07">July 2019</time> &ndash; <time datetime="2020-08">August 2020</time>
+              </p>
+
+            </div>
 
             <p>
               Worked as part of a team on Silm4 a web-based reimplementation of a legacy Java stock management system used by large, global companies.
@@ -239,17 +257,21 @@
 
           <li class="project">
 
-            <h3>
-              The Team
-            </h3>
+            <div class="heading">
 
-            <p class="project-link">
-              <a href="https://www.theteam.co.uk/" target="_blank" rel="noreferrer">www.theteam.co.uk</a>
-            </p>
+              <h3>
+                The Team
+              </h3>
 
-            <p class="project-dates">
-              <time datetime="2019-03">March 2019</time> &ndash; <time datetime="2019-06">June 2019</time>
-            </p>
+              <p class="project-link">
+                <a href="https://www.theteam.co.uk/" target="_blank" rel="noreferrer">www.theteam.co.uk</a>
+              </p>
+  
+              <p class="project-dates">
+                <time datetime="2019-03">March 2019</time> &ndash; <time datetime="2019-06">June 2019</time>
+              </p>
+
+            </div>
 
             <p>
               Built a microsite for their client <a href="https://www.arcadis.com/" target="_blank" rel="noreferrer">Arcadis</a> of a interactive 3D map two stylized cities showcasing transportation technologies being developed for the near future. Participated in the strategy development and guided the technical choices for the project. Liaised with the client to report progress and manage expectations.
@@ -259,17 +281,21 @@
 
           <li class="project">
 
-            <h3>
-              KoffeeCup
-            </h3>
+            <div class="heading">
 
-            <p class="project-link">
-              <a href="https://www.koffeecup.net/" target="_blank" rel="noreferrer">www.koffeecup.net</a>
-            </p>
+              <h3>
+                KoffeeCup
+              </h3>
 
-            <p class="project-dates">
-              <time datetime="2018-12">December 2018</time> &ndash; <time datetime="2019-02">February 2019</time>
-            </p>
+              <p class="project-link">
+                <a href="https://www.koffeecup.net/" target="_blank" rel="noreferrer">www.koffeecup.net</a>
+              </p>
+  
+              <p class="project-dates">
+                <time datetime="2018-12">December 2018</time> &ndash; <time datetime="2019-02">February 2019</time>
+              </p>
+
+            </div>
 
             <p>
               Created several interactive VueJS components and integrated them using the MapBox API for a realtime competition leaderboard ran by Redbull. Liaised with a remote team of frontend and backend developers helping integrate the different sections of a multi-language PHP-based website.
