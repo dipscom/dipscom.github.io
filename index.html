@@ -53,6 +53,35 @@
         margin: 0 2rem;
         margin-inline: 2rem;
       }
+
+      .project {
+        align-items: baseline;
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: max-content 1fr max-content;
+        margin-block-end: 2rem;
+      }
+
+      .project * {
+        margin: 0;
+      }
+
+      .project p:not(.project-link):not(.project-dates) {
+        grid-column: 1 / -1;
+        margin-inline-start: 2rem;
+      }
+
+      .project .project-link {
+        font-size: 0.8rem;
+        grid-column-start: 2;
+        grid-row-start: 1;
+      }
+
+      .project .project-dates {
+        font-size: 0.8rem;
+        grid-column-start: 3;
+        grid-row-start: 1;
+      }
     </style>
   </head>
 
@@ -88,65 +117,101 @@
 
         <ol class="projects">
 
-          <li>
+          <li class="project">
 
             <h3>
-              <a href="https://www.abovesurveying.com/" target="_blank" rel="noreferrer">Above Surveying</a>
+              Above Surveying
             </h3>
 
-            <p>
+            <p class="project-link">
+              <a href="https://www.abovesurveying.com/" target="_blank" rel="noreferrer">www.abovesurveying.com</a>
+            </p>
+
+            <p class="project-dates">
               <time datetime="2022-03">March 2022</time> &ndash; <time datetime="2026-07">July 2026</time>
             </p>
 
             <p>
-              In charge of the company's main client application frontend code, reviewing and giving feedback on UI and UX decisions.
+              Led the frontend development of a web application that allows users to manage and track the status of their solar farms.
             </p>
 
             <p>
-              Championed the implementation of component-based architecture for the UI elements, encouraged the use of Storybook for UI component development. Implemented and mentored others in the use of Playwright and Percy for E2E testing and the importance of visual regression testing.
+              Implemented a design system and component library using <b>Storybook</b>, allowing for a more consistent and efficient development process. Introduced the use of <b>Playwright</b> for E2E testing and <b>Percy</b> for visual regression testing, ensuring that the application remains stable and visually consistent across updates.
+            </p>
+
+            <p>
+              Led the migration of the frontend codebase from a legacy PHP and jQuery setup to a modern <b>Svelte</b> and <b>TypeScript</b> architecture, improving performance and maintainability.
+            </p>
+
+            <p>
+              Mentored team members on best practices for frontend development, including end-to-end, visual regression testing and <b>Svelte</b> component development. Participated in <b>code reviews</b> and provided feedback to ensure that the codebase remains clean and maintainable.
+            </p>
+
+            <p>
+              Envisaged and implemented a MVC-inspired architecture for the frontend codebase leveraging Svelte's reactive runes resulting in a more modular, scalable and maintainable codebase.
+            </p>
+
+            <p>
+              Implemented several <b>Leaflet.js</b> maps with custom markers, inputs and popups of varying levels of complexity and data density.
+            </p>
+
+            <p>
+              Took part in discusions and planning of the backend <b>REST API</b> endpoints, ensuring that the frontend and backend are well integrated and that the data is structured in a way that is easy to consume and manipulate on the frontend.
             </p>
 
           </li>
 
-          <li>
+          <li class="project">
 
             <h3>
-              <a href="https://www.thisisabsurd.co.uk/" target="_blank" rel="noreferrer"> Absurd</a>
+              Absurd
             </h3>
 
-            <p>
+            <p class="project-link">
+              <a href="https://www.thisisabsurd.co.uk/" target="_blank" rel="noreferrer">www.thisisabsurd.co.uk</a>
+            </p>
+
+            <p class="project-dates">
               <time datetime="2021-12">December 2021</time> &ndash; <time datetime="2022-02">February 2022</time>
             </p>
 
             <p>
-              Built static and dynamic Vue components for a large payment processing platform consuming REST API endpoints. Worked alongside Umbraco developers to implement these components into Umbraco's Razor templates. Also improved the HTML and CSS structure in several previously built components.
+              Built static and dynamic <b></b>Vue</b> components for a large payment processing platform consuming <b>REST API</b> endpoints. Worked alongside <b>Umbraco</b> developers to implement these components into Umbraco's Razor templates. Also improved the <b>HTML</b> and <b>CSS</b> structure in several previously built components.
             </p>
 
           </li>
 
-          <li>
+          <li class="project">
 
             <h3>
-              <a href="https://www.rpair.co.uk/" target="_blank" rel="noreferrer">RPAIR</a>
+              RPAIR
             </h3>
 
-            <p>
+            <p class="project-link">
+              <a href="https://www.rpair.co.uk/" target="_blank" rel="noreferrer">www.rpair.co.uk</a>
+            </p>
+
+            <p class="project-dates">
               <time datetime="2021-02">February 2021</time> &ndash; <time datetime="2021-12">December 2021</time>
             </p>
 
             <p>
-              Responsible for the frontend development of a web application that allows users to manage and track their watch and jewelry repair requests. Introduced the BEM methodology and implemented SASS, dramatically reducing the fileweight and complexity of the CSS codebase. Also reduced the JavaScript payload and improved the page's performance. Introduced E2E testing using Cypress and the use of Svelte for the dynamic components of the website. Consolidated repeated PHP into reusable customizable partials and removed redundant code.
+              Responsible for the frontend development of a web application that allows users to manage and track their watch and jewelry repair requests. Introduced the <b>BEM methodology</b> and implemented <b>SASS</b>, dramatically reducing the fileweight and complexity of the CSS codebase. Also reduced the JavaScript payload and improved the page's performance. Introduced E2E testing using <b>Cypress</b> and the use of <b>Svelte</b> for the dynamic components of the website. Consolidated repeated <b>PHP</b> into reusable customizable partials and removed redundant code.
             </p>
 
           </li>
 
-          <li>
+          <li class="project">
 
             <h3>
-              <a href="https://www.postscriptmedical.com/" target="_blank" rel="noreferrer">Postscript Medical</a>
+              PostScript Medical
             </h3>
 
-            <p>
+            <p class="project-link">
+              <a href="https://www.postscriptmedical.com/" target="_blank" rel="noreferrer">www.postscriptmedical.com</a>
+            </p>
+
+            <p class="project-dates">
               <time datetime="2020-09">September 2020</time> &ndash; <time datetime="2021-02">February 2021</time>
             </p>
 
@@ -156,13 +221,13 @@
 
           </li>
 
-          <li>
+          <li class="project">
 
             <h3>
-              <a href="https://www.branhill.com/" target="_blank" rel="noreferrer">Branhill Computing Limited</a>
+              Branhill Computing Limited
             </h3>
 
-            <p>
+            <p class="project-dates">
               <time datetime="2019-07">July 2019</time> &ndash; <time datetime="2020-08">August 2020</time>
             </p>
 
@@ -172,13 +237,17 @@
 
           </li>
 
-          <li>
+          <li class="project">
 
             <h3>
-              <a href="https://www.theteam.co.uk/" target="_blank" rel="noreferrer">The Team</a>
+              The Team
             </h3>
 
-            <p>
+            <p class="project-link">
+              <a href="https://www.theteam.co.uk/" target="_blank" rel="noreferrer">www.theteam.co.uk</a>
+            </p>
+
+            <p class="project-dates">
               <time datetime="2019-03">March 2019</time> &ndash; <time datetime="2019-06">June 2019</time>
             </p>
 
@@ -188,13 +257,17 @@
 
           </li>
 
-          <li>
+          <li class="project">
 
             <h3>
-              <a href="https://www.koffeecup.net/" target="_blank" rel="noreferrer">KoffeeCup</a>
+              KoffeeCup
             </h3>
 
-            <p>
+            <p class="project-link">
+              <a href="https://www.koffeecup.net/" target="_blank" rel="noreferrer">www.koffeecup.net</a>
+            </p>
+
+            <p class="project-dates">
               <time datetime="2018-12">December 2018</time> &ndash; <time datetime="2019-02">February 2019</time>
             </p>
 
