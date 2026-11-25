@@ -1,0 +1,12 @@
+{
+  // Must match the Worker's name in the Cloudflare dashboard exactly,
+  // otherwise deploying creates a second Worker.
+  "name": "personal-website",
+  "compatibility_date": "2026-11-01",
+
+  // Static-only for now: serve the repo root as files.
+  // `main` and the ASSETS binding get added together with src/worker.js.
+  "assets": {
+    "directory": ".",
+  },
+}

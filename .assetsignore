@@ -1,0 +1,17 @@
+# Files in the repo that must not be served by the Worker.
+# Same syntax as .gitignore.
+
+# Worker config and source
+.assetsignore
+wrangler.jsonc
+src/
+.wrangler/
+.git
+
+# Repo housekeeping
+README.md
+CNAME
+LICENSE
+
+# Drafts
+
