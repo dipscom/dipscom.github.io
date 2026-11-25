@@ -4,9 +4,17 @@
   "name": "personal-website",
   "compatibility_date": "2026-11-01",
 
-  // Static-only for now: serve the repo root as files.
-  // `main` and the ASSETS binding get added together with src/worker.js.
+  // Only runs for requests that don't match a static file (i.e. /api/contact).
+  "main": "src/worker.js",
+
+  // Serve the repo root as static files, minus what .assetsignore lists.
   "assets": {
     "directory": ".",
+    "binding": "ASSETS",
+  },
+
+  // Keeps Worker logs (console.error) visible in the dashboard.
+  "observability": {
+    "enabled": true,
   },
 }
