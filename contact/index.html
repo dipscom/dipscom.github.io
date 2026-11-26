@@ -4,40 +4,80 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Get in touch with Pedro Tavares" />
-    <title>Contact - Pedro Tavares</title>
+    <title>Pedro Tavares - Contact</title>
+    <style>
+      html {
+        font-family: system-ui, sans-serif;
+        font-size: 16px;
+        font-size: clamp(16px, 1rem + 0.5vw, 22px);
+        line-height: 1.5;
+      }
+
+      body {
+        margin: 1rem;
+      }
+
+      body > div {
+        margin: 0 auto;
+        max-width: 75ch;
+      }
+
+      h1 {
+        font-size: 3rem;
+      }
+
+      form {
+        display: grid;
+      }
+
+      form > input,
+      form > textarea,
+      button[type="submit"] {
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        padding: 0.25rem 0.5rem;
+      }
+
+      form > input {
+        margin-bottom: 1rem;
+      }
+
+      button[type="submit"] {
+        justify-self: start;
+      }
+    </style>
   </head>
   <body>
     <div class="page">
       <header>
-        <h1>Contact</h1>
+        <h1>Contact me</h1>
       </header>
 
       <main>
         <form method="POST" action="/api/contact">
-          <p>
-            <label for="email">Email</label>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              autocomplete="email"
-              maxlength="254"
-              required
-            />
-          </p>
+          <label for="email">Email:</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            autocomplete="email"
+            placeholder="your.email@example.com"
+            maxlength="254"
+            required
+          />
 
-          <p>
-            <label for="message">Message</label>
-            <textarea
-              id="message"
-              name="message"
-              rows="8"
-              maxlength="5000"
-              required
-            ></textarea>
-          </p>
+          <label for="message">Message:</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="8"
+            maxlength="5000"
+            placeholder="Hello Pedro, I would like to introduce myself and discuss a potential collaboration..."
+            required
+          ></textarea>
 
-          <p hidden>
+          <div hidden>
             <label for="company">Leave this field empty</label>
             <input
               id="company"
@@ -46,13 +86,11 @@
               tabindex="-1"
               autocomplete="off"
             />
-          </p>
+          </div>
 
           <p>Your message is emailed to me and only used to reply to you.</p>
 
-          <p>
-            <button type="submit">Send message</button>
-          </p>
+          <button type="submit">Send message</button>
         </form>
       </main>
     </div>
